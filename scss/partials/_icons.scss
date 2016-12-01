@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------ *\
+	Icons
+\* ------------------------------------------------------------ */
+
+[class^="ico-"] { 
+	display: inline-block; 
+	vertical-align: middle; 
+}
+
+.ico-play { 
+	background: url(../images/sprite/ico-play.png) 50% no-repeat; 
+	width: 20px; 
+	height: 22px; 
+}
+
+.ico-googleplay { 
+	background: url(../images/sprite/ico-google-play.png) 50% no-repeat; 
+	width: 27px; 
+	height: 30px; 
+}
+
+.ico-interface { 
+	background: url(../images/sprite/ico-interface.png) 50% no-repeat; 
+	width: 67px; 
+	height: 65px; 
+}
+
+.ico-cloud { background: url(../images/sprite/ico-cloud.png) 50% no-repeat; 
+	width: 71px; 
+	height: 64px; 
+}
+
+.ico-bubble { 
+	background: url(../images/sprite/ico-bubble.png) 50% no-repeat; 
+	width: 55px; 
+	height: 52px; 
+}
+
+.ico-arrow { 
+	background: url(../images/sprite/ico-arrow.png) 50% no-repeat; 
+	width: 7px; 
+	height: 11px; 
+}
+
+
+/* Icons - Retina */ 
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (   min--moz-device-pixel-ratio: 1.5), only screen and (     -o-min-device-pixel-ratio: 3/2), only screen and (        min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
+	.ico-play { 
+		background-image: url(../images/sprite/ico-play@2x.png); 
+		@include background-size(20px, 22px); 
+	}
+
+	.ico-googleplay { 
+		background-image: url(../images/sprite/ico-google-play@2x.png); 
+		@include background-size(27px, 30px); 
+	}
+
+	.ico-interface { 
+		background-image: url(../images/sprite/ico-interface@2x.png); 
+		@include background-size(67px, 65px); 
+	}
+
+	.ico-cloud { 
+		background-image: url(../images/sprite/ico-cloud@2x.png); 
+		@include background-size(71px, 64px); 
+	}
+
+	.ico-bubble { 
+		background-image: url(../images/sprite/ico-bubble@2x.png);
+		@include background-size(55px, 52px); 
+	}
+
+	.ico-arrow { 
+		background-image: url(../images/sprite/ico-arrow@2x.png); 
+		@include background-size(7px, 11px); 
+	}
+
+	.checkbox input + span { 
+		background-image: url(../images/sprite/checkbox@2x.png); 
+		@include background-size(17px, 13px); 
+	}
+}

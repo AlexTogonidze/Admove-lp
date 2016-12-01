@@ -1,0 +1,92 @@
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+    @if $xy == xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    @else if $xy == x {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    @else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        @include transform(translateY(-50%));
+    }
+}
+
+
+@mixin notext { 
+	font-size: 0; 
+	line-height: 0; 
+	text-indent: -100%; 
+	overflow: hidden; 
+}
+
+@mixin background-size($w, $h) { 
+	-webkit-background-size: $w $h; 
+	-moz-background-size: $w $h; 
+	-ms-background-size: $w $h; 
+	-o-background-size: $w $h; 
+	background-size: $w $h; 
+}
+
+@mixin cover { 
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+}
+
+@mixin transition($t...) { 
+	-webkit-transition: $t; 
+	-moz-transition: $t; 
+	-ms-transition: $t; 
+	-o-transition: $t; 
+	transition: $t; 
+}
+
+@mixin transform_vertical($t) { 
+	-webkit-transform: translateY($t); 
+	-moz-transform: translateY($t); 
+	-ms-transform: translateY($t); 
+	-o-transform: translateY($t); 
+	transform: translateY($t); 
+}
+
+@mixin transform_horizontal($t) { 
+	-webkit-transform: translateX($t); 
+	-moz-transform: translateX($t); 
+	-ms-transform: translateX($t); 
+	-o-transform: translateX($t); 
+	transform: translateX($t); 
+}
+
+@mixin scale($s...) { 
+	-webkit-transform: scale($s); 
+	-moz-transform: scale($s); 
+	-ms-transform: scale($s); 
+	-o-transform: scale($s); 
+	transform: scale($s); 
+}
+
+@mixin rotate($deg) { 
+	-webkit-transform: rotate($deg); 
+	-moz-transform: rotate($deg); 
+	-ms-transform: rotate($deg); 
+	-o-transform: rotate($deg); 
+	transform: rotate($deg); 
+}
+
+@mixin origin($x, $y) { 
+	-webkit-transform-origin: $x $y; 
+	-moz-transform-origin: $x $y; 
+	-ms-transform-origin: $x $y; 
+	-o-transform-origin: $x $y; 
+	transform-origin: $x $y; 
+}

@@ -1,0 +1,144 @@
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form-row { 
+	margin: 0 0 2px; 
+}
+
+.form-controls { 
+	position: relative; 
+
+	label { 
+		margin: 0; 
+		display: inline; 
+	}
+
+	i { cursor: text; 
+		font-size: $font-size-s; 
+		line-height: 2; 
+		color: $color-white; 
+		@include transition(opacity .25s); 
+		position: absolute; 
+		top: 18px; 
+		right: 28px; 
+		opacity: .1; 
+	}
+}
+
+
+
+.form-actions { 
+	margin: 10px 0 0; 
+
+	.checkbox { 
+		margin-top: 40px; 
+	}
+}
+
+
+
+.field { 
+	background: $color-black; 
+	opacity: .2; 
+	color: $color-white; 
+	@include transition(opacity .25s); 
+	border: 0 none; 
+	border-radius: 2px; 
+	box-shadow: none; 
+	width: 100%; 
+	font-size: $font-size-s; 
+	line-height: 2; 
+	padding: 18px 56px 18px 28px; 
+	margin: 0; 
+	display: block; 
+	&:focus {
+		outline: 0; opacity: .75;
+	}
+}
+
+
+.field:focus ~ label i { 
+	opacity: 1; 
+}
+
+.checkbox { 
+	font-size: $font-size-xs; 
+	display: block; 
+	padding-left: 44px; 
+	position: relative; 
+	overflow: hidden; 
+	color: $color-lightest-charcoal; 
+	font-weight: normal; 
+
+	input { 
+		visibility: hidden; 
+		position: absolute; 
+		top: 0; 
+		left: -40px; 
+	}
+
+	input + span { 
+		width: 23px; 
+		height: 22px; 
+		border-radius: 3px; 
+		background: #2e2e2e url(../images/sprite/checkbox.png) 3px 24px no-repeat; 
+		position: absolute; 
+		top: 4px; 
+		left: 0; 
+		box-shadow: 0 2px 1px rgba(0,0,0,.2) inset; 
+		cursor: pointer; 
+		@include transition(background-position .25s); 
+	}
+
+	input:checked + span { 
+		background-position: 3px 5px;
+	}
+}
+
+textarea { 
+	&.field {
+		resize: none;
+		height: 130px; 
+	}
+}
+
+.form {
+	.btn { 
+		font-family: $font-family-title; 
+		background: $color-light-charcoal; 
+		font-size: $font-size-xxl; 
+		box-shadow: 0 3px 4px rgba(0,0,0,.15); 
+		border: 0 none;
+		@include transition(background .25s, box-shadow .25s);
+		
+		&:before {
+			content:none;
+		} 
+		.ico-arrow {
+			margin-left: 4px; 
+		}
+
+		&:hover {
+			background: $color-lighter-charcoal;
+		}
+
+		&:active {
+			background: $color-light-charcoal; box-shadow: 0 0 0 rgba(0,0,0,.15), 0 1px 0 rgba(0,0,0,.54) inset;
+		}
+	}
+
+	.success,
+	.error {
+		display: none;
+		border: 2px solid white;
+		padding: 8px 15px;
+		margin-bottom: 10px;
+		font-size: 1.6rem;
+		color: white;
+	}
+
+	.error {
+		color: white;
+	}
+}

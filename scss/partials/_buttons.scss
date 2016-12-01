@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------ *\
+	Buttons
+\* ------------------------------------------------------------ */
+
+.btn { 
+	display: inline-block; 
+	font-size: $font-size-l; 
+	line-height: 60px; 
+	padding: 0 28px; 
+	background: $color-button; 
+	color: $color-white; 
+	border-radius: 3px; 
+	position: relative; 
+	min-width: 200px; 
+	text-align: center; 
+}
+
+.btn ~ .btn { 
+	margin-top: 20px; 
+}
+.btn:before { 
+	content: ''; 
+	background: rgb(255,65,95); 
+	background: -moz-linear-gradient(45deg, rgba(255,65,95,1) 0%, rgba(255,108,105,1) 100%); 
+	background: -webkit-linear-gradient(45deg, rgba(255,65,95,1) 0%,rgba(255,108,105,1) 100%); 
+	background: linear-gradient(45deg, rgba(255,65,95,1) 0%,rgba(255,108,105,1) 100%); 
+	position: absolute; top: -3px; left: -3px; bottom: -3px; 
+	right: -3px; border-radius: 4px; 
+	box-shadow: 0 0 0 rgba(0,0,0,.15); 
+	opacity: 0; 
+	@include scale(.98, .95); 
+}
+
+.btn:before {
+	-webkit-transition: -webkit-transform .15s, opacity .15s, box-shadow .15s;
+	   -moz-transition:    -moz-transform .15s, opacity .15s, box-shadow .15s;
+		-ms-transition: 	-ms-transform .15s, opacity .15s, box-shadow .15s;
+		 -o-transition: 	 -o-transform .15s, opacity .15s, box-shadow .15s;
+			transition: 		transform .15s, opacity .15s, box-shadow .15s;
+}
+.btn i,
+.btn span { 
+	position: relative; 
+}
+
+.btn i { 
+	margin-right: 13px; 
+}
+
+.btn .fa { 
+	font-size: 39px; 
+	line-height: 60px; 
+	vertical-align: middle; 
+}
+
+.btn:hover { 
+	color: $color-white; 
+}
+
+.btn:hover:before { 
+	opacity: 1; 
+	box-shadow: 0 3px 4px rgba(0,0,0,.15);
+	@include scale(1); 
+}
+
+.btn:active:before { 
+	box-shadow: 0 -3px 4px rgba(0,0,0,.15); 
+}
+
+/* Buttons - Responsive */ 
+	
+@media screen and (min-width: 500px) {
+	.btn ~ .btn { 
+		margin-top: 0; margin-left: 26px; 
+	}
+}
